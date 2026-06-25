@@ -4,28 +4,22 @@
 using namespace std;
 
 double inchesToCentimeters(double inches) {
-    // TODO: return inches converted to centimeters.
-
     return inches * 2.54; //inches times 2.54
 }
 
 double centimetersToInches(double centimeters) {
-    // TODO: return centimeters converted to inches.
     return centimeters / 2.54; // centimeters divided by 2.54
 }
 
 double poundsToKilograms(double pounds) {
-    // TODO: return pounds converted to kilograms.
     return pounds * 0.45359237; //pounds times 0.45359237
 }
 
 double kilogramsToPounds(double kilograms) {
-    // TODO: return kilograms converted to pounds.
     return kilograms * 2.20462; // kilo times 2.20462
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
-    // TODO: return Fahrenheit converted to Celsius.
     return (fahrenheit - 32) / 1.8; // f minus 32 divided by 1.8
 }
 
@@ -33,8 +27,12 @@ double celsiusToFahrenheit(double celsius) {
     return (celsius * 1.8) + 32; // celsius times 1.8 plus 32
 }
 
-bool isValidMenuChoice(int choice) { 
-    return (choice >= EXIT_CHOICE && choice <= CELSIUS_TO_FAHRENHEIT); //return only valid option
+bool isValidMenuChoice(int choice) {
+    if (choice >= EXIT_CHOICE && choice <= CELSIUS_TO_FAHRENHEIT){
+    return true;
+    } else { 
+    return false;
+    } //return user choice between all choices
 }
 
 bool requiresNonNegativeValue(int choice) {
